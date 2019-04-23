@@ -1,4 +1,9 @@
 \documentclass[a4paper, 11pt]{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage{fullpage} % changes the margin
 
@@ -6,8 +11,12 @@
 
 \section*{CoGaDB}
 \section*{Overview}
-Overview
-% \cite{Flueck}
+CoGaDB\footnote{http://cogadb.dfki.de/} is a column-oriented coprocessor-accelerated database system which effectively provides a high performance OLAP engine that makes efficient use of GPUs, CPUs or MICs (Xeon Phi) for query processing. This system is developed by the DIMA\footnote{https://www.dima.tu\text{-}berlin.de/menue/database\_systems\_and\_information\_management\_group/} group at Berlin and the IAM\footnote{https://www.dfki.de/web/forschung/iam/} group at German Research Center for Artificial Intelligence.
+\\
+CoGaDB implements a specialized cost modelling algorithm for selection of the most efficient heterogeneous processor environment using parallel query processor and \emph{Hybrid Query Processing Engine}(HyPE)\cite{cogadb_hype}. It also uses a customized query compiler called Hawk\cite{cogadb_hawk} for generation of specialized code for different processors which is highly optimized depending upon the query workload and data set.
+
+\subsubsection*{HyPE - Hybrid Query Processing Engine}
+HyPE is hybrid query processing engine that helps in selecting the best possible processing system from the pool of heterogeneous processing units based on effective cost models and query plans. It is driven on the decision modelling algorithms and perform the following tasks\cite{cogadb_hype}: (1) estimation of operators cost with respect to data locality, (2) strategies for hybrid query optimizations, and (3) selecting the most optimized query plan.
 
 \section*{Architecture}
 Architecture
@@ -41,9 +50,14 @@ Consistency and Transaction Processing
 
 
 \begin{thebibliography}{9}
-\bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
-\bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
-August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+\bibitem{cogadb_design_impl} 
+Sebastian Bre{ß}. The Design and Implementation of CoGaDB: A Column-oriented GPU-accelerated DBMS. \emph{Datenbank Spektrum}, $14:199\text{-}209,2014$ 
+\bibitem{cogadb_hype}  S. Breß. Why it is time for a HyPE: A hybrid query processing engine for efficient
+GPU coprocessing in dbms. \emph{The VLDB PhD workshop, PVLDB}, 6(12):1398–1403,2013
+\bibitem{operator_gpu} S. Breß, N. Siegmund, L. Bellatreche, and G. Saake. An operator-stream-based
+scheduling engine for effective GPU coprocessing. In \emph{ADBIS}, pages 288–301. Springer, 2013.
+\bibitem{cogadb_hawk} S Breß, B Kocher, H Funke, S Zeuch, T Rabl and V Markl. Generating Custom Code for Efficient Query Execution.
+on Heterogeneous Processors
 \end{thebibliography}
 
 \end{document}
