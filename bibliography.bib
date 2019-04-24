@@ -1,0 +1,135 @@
+@Article{cogadb_design_impl,
+    author="Bre{\ss}, Sebastian",
+    title="The Design and Implementation of CoGaDB: A Column-oriented GPU-accelerated DBMS",
+    journal="Datenbank-Spektrum",
+    year={2014},
+    month=Nov,
+    day=01,
+    volume="14",
+    number="3",
+    pages="199--209",
+    abstract="Nowadays, the performance of processors is primarily bound by a fixed energy budget, the power wall. This forces hardware vendors to optimize processors for specific tasks, which leads to an increasingly heterogeneous hardware landscape. Although efficient algorithms for modern processors such as GPUs are heavily investigated, we also need to prepare the database optimizer to handle computations on heterogeneous processors. GPUs are an interesting base for case studies, because they already offer many difficulties we will face tomorrow.",
+    issn="1610-1995",
+    doi="10.1007/s13222-014-0164-z",
+    url="https://doi.org/10.1007/s13222-014-0164-z"
+}
+
+@article{cogadb_hype,
+    author = {Bre\ss, Sebastian and Saake, Gunter},
+    title = {Why It is Time for a HyPE: A Hybrid Query Processing Engine for Efficient GPU Coprocessing in DBMS},
+    journal = {Proc. VLDB Endow.},
+    issue_date = {August 2013},
+    volume = {6},
+    number = {12},
+    month = aug,
+    year = {2013},
+    issn = {2150-8097},
+    pages = {1398--1403},
+    numpages = {6},
+    url = {http://dx.doi.org/10.14778/2536274.2536325},
+    doi = {10.14778/2536274.2536325},
+    acmid = {2536325},
+    publisher = {VLDB Endowment},
+} 
+
+% @InProceedings{operator_gpu,
+% author="Bre{\ss}, Sebastian
+% and Siegmund, Norbert
+% and Bellatreche, Ladjel
+% and Saake, Gunter",
+% editor="Catania, Barbara
+% and Guerrini, Giovanna
+% and Pokorn{\'y}, Jaroslav",
+% title="An Operator-Stream-Based Scheduling Engine for Effective GPU Coprocessing",
+% booktitle="Advances in Databases and Information Systems",
+% year={2013},
+% publisher="Springer Berlin Heidelberg",
+% address="Berlin, Heidelberg",
+% pages="288--301",
+% abstract="Since a decade, the database community researches opportunities to exploit graphics processing units to accelerate query processing. While the developed GPU algorithms often outperform their CPU counterparts, it is not beneficial to keep processing devices idle while over utilizing others. Therefore, an approach is needed that effectively distributes a workload on available (co-)processors while providing accurate performance estimations for the query optimizer. In this paper, we extend our hybrid query-processing engine with heuristics that optimize query processing for response time and throughput simultaneously via inter-device parallelism. Our empirical evaluation reveals that the new approach doubles the throughput compared to our previous solution and state-of-the-art approaches, because of nearly equal device utilization while preserving accurate performance estimations.",
+% isbn="978-3-642-40683-6"
+% }
+
+@article{cogadb_hawk,
+    author    = {Sebastian Bre{\ss} and
+               Bastian K{\"{o}}cher and
+               Henning Funke and
+               Tilmann Rabl and
+               Volker Markl},
+    title     = {Generating Custom Code for Efficient Query Execution on Heterogeneous
+               Processors},
+    journal   = {CoRR},
+    volume    = {abs/1709.00700},
+    year      = {2017},
+    url       = {http://arxiv.org/abs/1709.00700},
+    archivePrefix = {arXiv},
+    eprint    = {1709.00700},
+    timestamp = {Mon, 13 Aug 2018 16:46:26 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1709-00700},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{microprocessors,
+    author = {Borkar, Shekhar and Chien, Andrew A.},
+    title = {The Future of Microprocessors},
+    journal = {Commun. ACM},
+    issue_date = {May 2011},
+    volume = {54},
+    number = {5},
+    month = may,
+    year = {2011},
+    issn = {0001-0782},
+    pages = {67--77},
+    numpages = {11},
+    url = {http://doi.acm.org/10.1145/1941487.1941507},
+    doi = {10.1145/1941487.1941507},
+    acmid = {1941507},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+} 
+
+@misc{cogadb_manual,
+    author = {S. Breß, R. Haberkorn and S. Ladewig},
+    title = {CoGaDB reference manual.},
+    year = {2014},
+    howpublished = "\url{http://wwwiti.cs.uni-magdeburg.de/iti\_db/research/gpu/cogadb/0.3/doc/refman.pdf}"
+}
+    
+@article{cogadb_relational_query,
+ author = {He, Bingsheng and Lu, Mian and Yang, Ke and Fang, Rui and Govindaraju, Naga K. and Luo, Qiong and Sander, Pedro V.},
+ title = {Relational Query Coprocessing on Graphics Processors},
+ journal = {ACM Trans. Database Syst.},
+ issue_date = {December 2009},
+ volume = {34},
+ number = {4},
+ month = dec,
+ year = {2009},
+ issn = {0362-5915},
+ pages = {21:1--21:39},
+ articleno = {21},
+ numpages = {39},
+ url = {http://doi.acm.org/10.1145/1620585.1620588},
+ doi = {10.1145/1620585.1620588},
+ acmid = {1620588},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Relational database, graphics processors, join, parallel processing, primitive, sort},
+}
+
+@inproceedings{cogadb_dict_compression,
+ author = {Binnig, Carsten and Hildenbrand, Stefan and F\"{a}rber, Franz},
+ title = {Dictionary-based Order-preserving String Compression for Main Memory Column Stores},
+ booktitle = {Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data},
+ series = {SIGMOD '09},
+ year = {2009},
+ isbn = {978-1-60558-551-2},
+ location = {Providence, Rhode Island, USA},
+ pages = {283--296},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/1559845.1559877},
+ doi = {10.1145/1559845.1559877},
+ acmid = {1559877},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {column store, string compression},
+}

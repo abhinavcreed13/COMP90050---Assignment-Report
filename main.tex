@@ -9,6 +9,8 @@
 \usepackage{graphicx}
 \graphicspath{ {data/images/} }
 \usepackage{import}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
 
 \begin{document}
 
@@ -20,14 +22,11 @@
 \import{cogadb/}{architecture.tex}
 
 \section*{Exploring the design-space}
-\subsection*{Non-functional properties}
-\subsubsection*{Performance}
-\import{cogadb/}{non.func.performance.tex}
-
-\subsubsection*{Portability}
-\import{cogadb/}{non.func.portability.tex}
+In this section, we discuss the design-space of CoGaDB using functional and non-functional properties. We have researched and performed in-depth analysis of the CoGaDB on 8 different parameters which are stated below.
 
 \subsection*{Functional properties}
+In the following, we perform analysis on the functional properties on which DBMSs are designed upon. We target underlying storage and processing models of CoGaDB, how query optimisation and consistency is achieved in the system and researched several other aspects to understand its functional nature.
+
 \subsubsection*{Storage system}
 \import{cogadb/}{func.storage.system.tex}
 
@@ -46,8 +45,15 @@
 \subsubsection*{Consistency and Transaction Processing}
 \import{cogadb/}{func.consistency.transaction.tex}
 
-\begin{thebibliography}{9}
-\import{/}{bibliography.tex}
-\end{thebibliography}
+
+\subsection*{Non-functional properties}
+\subsubsection*{Performance}
+\import{cogadb/}{non.func.performance.tex}
+
+\subsubsection*{Portability}
+\import{cogadb/}{non.func.portability.tex}
+
+
+\printbibliography
 
 \end{document}

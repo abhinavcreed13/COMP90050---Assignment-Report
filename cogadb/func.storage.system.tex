@@ -1,1 +1,5 @@
-Storage System
+Data locality is very crucial aspect for building GPU-accelerated database systems of high performance. Taking GPU architecture into consideration, it becomes very difficult for systems to perform operations on GPU due to its memory transfer constraint which requires data to be present on the GPU for processing. CoGaDB storage system policy understands this requirement of the GPU's architecture and designed its workflows to minimize this limitation.
+\newline
+The work of He and others showed that GPU acceleration is not beneficial if data is required to be fetched from the disk\cite{cogadb_relational_query}. Hence, CoGaDB storage system is constrained on the underlying fact that data should be present in the high-throughput zone. Therefore, CoGaDB uses main-memory as the primary source of storage system for its working. 
+\newline
+The storage system tries to load complete database in the main-memory during startup and relies on the operating system's virtual memory management to manage swapping of data with disk based on least recently used pages algorithm. Using this approach, CoGaDB can transfer data from main-memory to GPU very efficiently, leading to immense increase in the GPU acceleration requirement.
