@@ -10,6 +10,7 @@
 \graphicspath{ {data/images/} }
 \usepackage{import}
 \usepackage[backend=biber]{biblatex}
+\usepackage{caption,subcaption}
 \addbibresource{bibliography.bib}
 
 \begin{document}
@@ -45,14 +46,16 @@ In the following, we perform analysis on the functional properties on which DBMS
 \subsubsection*{Consistency and Transaction Processing}
 \import{cogadb/}{func.consistency.transaction.tex}
 
-
 \subsection*{Non-functional properties}
+In the following, we perform analysis on the non-functional properties for which DBMSs are typically optimized and tweaked upon. We target performance and portability as the parameters of understanding CoGaDB non-functional nature.
 \subsubsection*{Performance}
 \import{cogadb/}{non.func.performance.tex}
 
 \subsubsection*{Portability}
 \import{cogadb/}{non.func.portability.tex}
 
+\section*{GPUDB}
+\import{gpudb/}{index.tex}
 
 \printbibliography
 
